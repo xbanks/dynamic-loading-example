@@ -113,3 +113,7 @@ libgreetings.so: greetings.cpp
     # -shared Create a shared object -> for the linking step
     g++ -fpic -shared greetings.cpp -o libgreetings.so
 ```
+
+The rest of this repository includes an example of a dynamic loading based plugin system. It includes 
+a few interesting tricks such as GCCs `__attribute__((constructor))` attribute and an inheritance based plugin
+architecture (if you can call it that lol).
